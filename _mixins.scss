@@ -1,0 +1,112 @@
+@mixin hover {
+    &:hover {
+        color: $color1;
+    }
+}
+
+@mixin boxshadow {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@mixin menulink ($fs, $c: $colora) {
+    color: $c;
+    text-decoration: none;
+    font-size: $fs;
+    font-family: $fontsec;
+    font-weight: 500;
+    @include hover;
+}
+
+
+@mixin herotitle {
+    font-family: $fontprin;
+    font-weight: 500;
+    color: $colora;
+    font-size: 4em;
+    @media (max-width: 767px){
+        font-size: 3em;
+    }
+}
+
+@mixin h2title {
+    font-family: $fontprin;
+    font-weight: 600;
+    font-size: 3em;
+    line-height: 1.25em;
+    margin: 0.5em 0.5em 0.5em 0;
+    @media (max-width: 992px) {
+        font-size: 2.5em;
+    }
+    @media (max-width: 767px){
+        font-size: 2em;
+    }
+}
+
+@mixin h3title {
+    font-family: $fontsec;
+    font-weight: 400;
+    font-size: 2em;
+    color: $color1;
+    margin-bottom: 0.5em;
+    @media (max-width: 992px){
+        font-size: 1.25em;
+    }
+}
+
+@mixin para {
+    font-family: $fontsec;
+    font-size: 1.25em;
+    line-height: 1.5em;
+     @media (max-width: 992px){
+        font-size: 1em;
+     }
+}
+
+@mixin btn {
+    & {
+    background-color: $color1;
+    border: 0;
+    border-radius: 56px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $fontsec;
+    font-size: 0.75em;
+    font-weight: 500;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    &:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 125px;
+    content: "";
+    height: 50%;
+    left: 4%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+    }
+
+    &:hover {
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(1.05);
+    }
+
+    @media (min-width: 767px) {
+    & {
+        padding: 16px 48px;
+        font-size: 1.125em;
+    }
+    }
+}

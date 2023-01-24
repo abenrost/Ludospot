@@ -1,0 +1,186 @@
+// Style de la page accueil
+#accueil {
+    background-color: $color3;
+    // Style hero pour la page d'accueil uniquement
+    .homehero {
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+    
+        // Style du titre 
+        .cont-titre {
+            width: 100%;
+            text-align: end;
+            align-self: flex-end;
+            margin: 4em;
+            h1 {
+                @include herotitle;
+            }
+            span {
+                font-family: $fontprin;
+                font-weight: 400;
+                color:$colora;
+                font-size: 2em;
+            }
+        }
+    }
+
+    // Style contenu page 
+    .page {
+        width: 80%;
+        margin: auto;
+
+        .article1 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        .article2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        // Style commun aux deux articles
+        .article1, .article2 { 
+            padding: 2em;
+            margin: 2em;
+            .cont-art {
+                width: 45%;
+                h3 {
+                    @include h3title;
+                }
+                h2 {
+                    @include h2title;
+                }
+                p {
+                    @include para;
+                }
+            }
+            .cont-media {
+                width: 45%;
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include boxshadow;
+                }
+                .cont-video {
+                    position: relative;
+                    width: 45%;
+                    height: 45%;
+                    iframe {
+                        position: absolute;
+                        left: 140%;
+                        top: -50%;
+                        max-width: 100%;
+                        height: auto;
+                        @include boxshadow;
+                    }
+                }
+            }
+        }
+    }
+
+    // Style pour la galerie
+    .gallery {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3 {
+            @include h3title;
+        }
+        h2 {
+            @include h2title;
+        }
+
+        p {
+            @include para;
+        }
+        
+        .img-jeux {
+            background-color: $color2;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+            gap: 0.5em;
+            margin: 2em;
+        }
+
+        a {
+            @include btn;
+            margin: 2em;
+        }
+
+       
+    }
+
+        // Media queries
+
+    @media (max-width: 1200px){
+        .page {
+            .article1, .article2 {
+                .cont-media {
+                    margin: 1em 0;
+                    display: flex;
+                    flex-direction: column;
+                .cont-video {
+                    width: 100%;
+                    height: auto;
+                    position: initial;
+                    margin: 1em 0;
+                    
+                        iframe {
+                            position: initial;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 992px){
+        // media pour la page
+        .page {
+            width: 90%;
+            .article1, .article2 {
+                flex-direction: column;
+                padding: 0;
+                margin: 2em 0;
+                .cont-media {
+                    width: 100%;
+                }
+                .cont-art {
+                    width: 100%;
+                }
+            }
+        }
+    } 
+    @media (max-width: 767px){
+        // media hero
+        .homehero {
+            .cont-titre {
+                margin: 2em;
+                span {
+                    font-size: 1.5em;
+                }
+            }
+        }
+        
+        // Media galerie
+        .gallery {
+            width: 90%;
+            .img-jeux {
+                margin: 0;
+            }
+        }
+    }
+}
+
+

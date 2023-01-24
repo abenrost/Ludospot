@@ -1,0 +1,23 @@
+//style commun aux pages qui contiennent hero
+.hero { 
+    height: 60vh;
+    width: 90%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    .cont-titre { 
+        h2 {
+            @include herotitle;
+        }
+        span {
+            font-family: $fontprin;
+            color: $colora;
+            font-size: 2em;
+            @media (max-width: 767px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

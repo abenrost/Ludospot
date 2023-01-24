@@ -1,0 +1,40 @@
+#page404 {
+    .hero404 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        .container {
+            width: 40%;
+            padding: 4em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            h2 {
+                @include herotitle;
+            }
+            p {
+                @include para;
+                color: $colora;
+                font-weight: 500;
+                a {
+                    text-decoration: none;
+                    color: $color1;
+                }
+            }
+        }
+        ul {
+            padding: 4em;
+            list-style: none;
+            li {
+                padding: 0.5em 0;
+                a {
+                    @include menulink(1.5em);
+                } 
+            }
+        }
+        
+    }
+}

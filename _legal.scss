@@ -1,0 +1,18 @@
+#legal {
+    padding: 15% 10%;
+    background-color: $color3;
+    h2 {
+        @include h2title;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    h3 {
+        @include h3title;
+        color: $colorb;
+        font-weight: 500;
+        margin-block: 1em;
+    }
+    p {
+        @include para;
+    }
+}

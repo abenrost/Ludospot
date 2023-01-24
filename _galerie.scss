@@ -1,0 +1,46 @@
+#galerie {
+    padding: 2em 0;
+    background-color: $color3;
+
+    //style du titre hero pour la Galerie, style commun dans hero.scss
+    .hero {
+        background-size: cover;
+        justify-content: center;
+        .cont-titre { 
+            width: 50%;
+            padding: 2em 0;
+            text-align: center;
+        }
+    }
+    // conteneur principal
+    .container {
+        width: 80%;
+        margin: auto;
+        margin: 6em auto;
+        h2 {
+            @include h2title;
+            text-align: center;
+        }
+        // Conteneur d'images de chaque jeu
+        figure {
+            margin: 2em 0;
+            padding: 1em;
+            background-color: $color2;
+            column-gap: 1em;
+            // Conteneur d'une image
+            figure {
+                max-width: 250px;
+                height: auto;
+                // a {
+                //     img {
+                        
+                //     }
+                // }
+            }
+            figcaption {
+                font-family: $fontsec;
+            }
+        }
+    }
+    // media queries 
+}

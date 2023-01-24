@@ -1,0 +1,120 @@
+#jeu {
+    background-color: $color3;
+    padding-top: 2em;
+    
+    //  image mise en avant 
+   .posthero {
+    display: flex;
+    justify-content: center;
+    padding-block: 3em;
+   } 
+
+   .post-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 6em 0;
+    
+    .wp-element-caption {
+        font-family: $fontprin;
+        text-align: center;
+    }
+    .carjeu {
+        display: flex;
+        align-items: center;
+        margin: 1em 0;
+        align-self: baseline;
+        background-color: $color2;
+        border-radius: 1em;
+        * {
+            margin: 0.5em 0.5em;
+        }
+        svg {
+            font-size: 1.5em;
+        }
+        span {
+            font-family: $fontsec;
+            font-size: 1.5em;
+        }
+        
+    }
+    article {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include h2title;
+            text-align: center;
+        }
+        p {
+            @include para;
+            margin: 1em 0;
+        }
+
+        .artinfo {
+            text-align: start;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            span {
+                padding: 1em 0.5em;
+                display: flex;
+                align-items: center;
+                font-family: $fontsec;
+                font-weight: 500;
+                a {
+                    margin: 0 0.5em;
+                    text-decoration: none;
+                    color: $colorb;
+                    font-family: $fontsec;
+                    background-color: $color2;
+                    padding: 0.5em;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .autinfo {
+            background-color: $color1;
+            padding: 1em 1em;
+            display: flex;
+            margin: 2em 0;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 0 1em;
+                span {
+                    color: $colora;
+                    font-family: $fontsec;
+                    padding: 0.5em;
+                }
+                .autname {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+   }
+
+    //    media queries
+   @media (max-width: 767px) {
+    .posthero {
+        img {
+            width: 80%;
+            height: auto;
+        }
+       } 
+        .post-container {
+            flex-direction: column;
+            width: 90%;
+            article {
+                width: 100%;
+            }
+        }
+   }
+}
